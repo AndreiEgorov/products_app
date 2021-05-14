@@ -1,9 +1,11 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const productRouter = require("./routes/product");
 const app = express();
 const port = 3000;
 const appLink = `http://localhost:${port}`;
 
+app.use(bodyParser());
 app.use("/products", productRouter);
 
 app.get("/", (req, res) => {

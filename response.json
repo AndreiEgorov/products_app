@@ -1,0 +1,54 @@
+{
+  "allProducts": [
+    {
+      "product_id": "1",
+      "name": "shovel",
+      "price": "45",
+      "description": "good garden shovel"
+    },
+    {
+      "product_id": "3",
+      "name": "bucket",
+      "price": "20",
+      "description": "nice bucket"
+    },
+    {
+      "product_id": "5",
+      "name": "rake",
+      "price": "12",
+      "description": "dont step on it"
+    },
+    {
+      "product_id": "6",
+      "name": "gloves",
+      "price": "5",
+      "description": "nice gloves"
+    }
+  ],
+  "mostViewedProds": [
+    {
+      "product_id": "3",
+      "name": "bucket",
+      "price": "20",
+      "description": "nice bucket"
+    },
+    {
+      "product_id": "5",
+      "name": "rake",
+      "price": "12",
+      "description": "dont step on it"
+    },
+    {
+      "product_id": "6",
+      "name": "gloves",
+      "price": "5",
+      "description": "nice gloves"
+    }
+  ],
+  "productById": {
+    "product_id": "6",
+    "name": "gloves",
+    "price": "5",
+    "description": "nice gloves"
+  }
+}
