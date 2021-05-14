@@ -1,10 +1,10 @@
 const express = require("express");
-const productsRouter = require("./routes/products");
+const productRouter = require("./routes/product");
 const app = express();
 const port = 3000;
 const appLink = `http://localhost:${port}`;
 
-app.use("/products", productsRouter);
+app.use("/products", productRouter);
 
 app.get("/", (req, res) => {
   res.send(
