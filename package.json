@@ -1,0 +1,11 @@
+{
+  "name": "products_app",
+  "version": "1.0.0",
+  "description": "Products app for Galvanize",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "author": "Andrei Egorov",
+  "license": "ISC"
+}
