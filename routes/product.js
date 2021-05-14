@@ -1,7 +1,11 @@
 const express = require("express");
-
+const middlwareHandler = require("./middleware");
 const productController = require("../controllers/product");
+
 const productRouter = express.Router();
+
+productRouter.use(["/", "/most_viewed", "/:productId"], middlwareHandler.supportedCurrencyQueryHandler);
+productRouter.use(["/"], middlwareHandler.productCreationParamsHandler);
 
 productRouter.get("/", productController.getAllProds);
 productRouter.get("/most_viewed", productController.getMostViewedProds);
