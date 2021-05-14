@@ -10,7 +10,6 @@ module.exports.supportedCurrencyQueryHandler = (req, res, next) => {
       });
     }
   }
-
   next();
 };
 

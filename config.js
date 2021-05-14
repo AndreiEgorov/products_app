@@ -3,7 +3,8 @@
 const currencyExchangeAccessKey = "27d0a0d0fc80ff8753d8023b46cd515d";
 const supportedCurrencies = ["USD", "CAD", "EUR", "GBP"];
 const sourceCurrency = "USD";
-const pgDbName = "galvanize_test";
+
+const pgDbName = process.env.NODE_ENV === "test" ? "galvanize_test" : "galvanize_test";
 const pgUser = "postgres";
 const pgPassword = "password";
 

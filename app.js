@@ -14,6 +14,6 @@ app.get("/", (req, res) => {
   );
 });
 
-app.listen(port, () => {
+module.exports = app.listen(port, () => {
   console.log(`Product app listening at ${appLink}`);
 });

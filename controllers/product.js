@@ -10,7 +10,6 @@ module.exports.createProd = async (req, res) => {
 
 module.exports.getAllProds = async (req, res) => {
   const { targetCurrency } = req.query;
-
   let allProducts = await Product.fetchAllProds();
   if (targetCurrency) {
     allProducts = await exchange.convertPrices(allProducts, targetCurrency);
@@ -20,6 +19,7 @@ module.exports.getAllProds = async (req, res) => {
 
 module.exports.getMostViewedProds = async (req, res) => {
   const { targetCurrency, maxProducts } = req.query;
+
   let mostViewedProds = await Product.fetchMostViewedProds(maxProducts);
   if (targetCurrency) {
     mostViewedProds = await exchange.convertPrices(
@@ -36,8 +36,8 @@ module.exports.getProdByid = async (req, res) => {
   const { targetCurrency } = req.query;
 
   let prodById = await Product.fetchProdById(productId);
-  if (targetCurrency){
-    prodById = await exchange.convertPrices(prodById, targetCurrency)
+  if (targetCurrency) {
+    prodById = await exchange.convertPrices(prodById, targetCurrency);
   }
   res.json({ product: prodById });
 };
